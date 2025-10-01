@@ -1,0 +1,58 @@
+/* TODO: substituir variáveis abaixo pelas cores oficiais do manual de marca da BETADEV */
+:root {
+  --brand-primary: #0F3DDE; /* substituir pela cor primária oficial */
+  --brand-secondary: #FFC300; /* substituir pela cor secundária oficial */
+  --brand-neutral-800: #1A1A1A; /* substituir pela cor neutra 800 oficial */
+  --brand-neutral-600: #4B5563; /* substituir pela cor neutra 600 oficial */
+  --brand-bg: #F8FAFC; /* substituir pelo background oficial */
+}
+
+body {
+  font-feature-settings: 'liga' 1, 'kern' 1;
+}
+
+#mobile-nav[hidden] {
+  display: none;
+}
+
+.hero-dot,
+.testimonial-dot {
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.hero-dot:focus-visible,
+.testimonial-dot:focus-visible,
+.testimonial-prev:focus-visible,
+.testimonial-next:focus-visible,
+#cookie-accept:focus-visible,
+.faq-trigger:focus-visible,
+#menu-toggle:focus-visible {
+  outline: 2px solid var(--brand-primary);
+  outline-offset: 2px;
+}
+
+.hero-dot:hover,
+.testimonial-dot:hover {
+  transform: scale(1.1);
+}
+
+#cookie-banner[hidden] {
+  display: none !important;
+}
+
+button,
+[role="button"],
+.faq-trigger {
+  min-height: 44px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
